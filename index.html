@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Bootstrap</title>
+
+<!-- BOOTSTRAP CDN CSS -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<!-- style se agrega para el punto 6. BREAKPOINTS DE BOOTSTRAP, PARA CAMBIAR LOS ESTILOS DEPENDIENDO DEL TAMAÑO DE PANTALLA  para el breakpoint linea 485 -->
+<!--
+ 
+min-width = indica cuando sea menos de ....px
+
+max-width = indica cuando sea mayor que ....px
+
+-->
+
+<style media="screen">
+	@media (max-width: 576px ){
+		body{
+			background: red;
+		}
+	} 
+@media (min-width: 768px ){
+		body{
+			background: blue;
+		}
+	} 
+	@media (min-width: 992px ){
+		body{
+			background: blue;
+		}
+	} 
+		@media (min-width: 1200px ){
+		body{
+			background: white;
+		}
+	} 
+</style>
+
+<!-- link de icones del punto 7 -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+<!-- 1.- TIPOGRAFIAS DE BOOTSTRAP -->
+
+<h1>hola Bootstrap </h1>
+<h2>hola Bootstrap </h2>
+<h3>hola Bootstrap </h3>
+<h4>hola Bootstrap </h4>
+<h5>hola Bootstrap </h5>
+<h6>hola Bootstrap </h6>
+
+<hr>
+
+<!-- se puede jugar con las clases predefinidas de Booststrap para establecer los estilos -->
+
+
+
+<h1 class="h2">hola Bootstrap </h1>
+<h4 class="h1">hola Bootstrap </h4>
+<h5 class="h3">hola Bootstrap </h5>
+
+<hr>
+
+<!-- para establer un emcabezado, para hacer una portada, ya que son parrafos muy grandes -->
+
+
+<h1 class="display-1">hola Bootstrap </h1>
+<h1 class="display-2">hola Bootstrap </h1>
+<h1 class="display-3">hola Bootstrap </h1>
+<h1 class="display-4">hola Bootstrap </h1>
+
+<hr>
+
+<!-- la class = "text-muted" permite realizar un contrastes al texto, y a traves del <span> </span> permitimos establer otra funcionalidad tipo parrafo  -->
+
+<h1>hola Bootstrap <span class="text-muted"> con HTLM </span></h1>
+
+<hr>
+<!-- transformaciones de textos, la class="lead" permite tener otro estilo -->
+
+<p class="lead">Lorem ipsum are you ready, en estos momentos estos aprendiendo bootstrap, con estilos predefinos.</p>
+
+<p class="font-weight-bold"> Negrita</p> <!-- texto en negrita-->
+<p class="font-italic">Cursiva</p> <!-- tecto en cursiva-->
+<p class="font-weight-normal">texto normal</p>  <!--texto normal, para cuando se necesite volver el texto a normal -->
+
+<p class="text-uppercase">a mayuscula</p><!-- lleva el texto a mayuscula -->
+<p class="text-lowercase">A MINUSCULA</p> <!-- lleva el texto a minuscula --> 
+<p class="text-capotalize"> mayusculas la primera</p><!-- convierte las primeras letras a mayusculas -->
+
+<blockquote class="blockquote">
+<p>Lorem ipsum are you ready, en estos momentos estos aprendiendo bootstrap, con estilos predefinos.</p> <!-- esta clase sirve para cambiar el estilo a tipo cita -->	
+
+<footer class="blockquote">
+alguien famoso	
+</footer>
+</blockquote>
+
+
+
+
+<!-- 2.- ALINEACION DE TEXTOS -->
+
+<!-- La class="text-justify" sive para justificar el texto-->
+
+<p class="text-justify">Lorem ipsum are you ready, en estos momentos estos aprendiendo bootstrap, con estilos predefinos.</p> 
+
+<hr>
+
+<p class="text-left">hola que tal</p> <!--Alinear a la izquieda-->
+<p class="text-center">hola que tal</p><!--Alinear al centro-->
+<p class="text-right">hola que tal</p> <!--Alinear a la derecha-->
+
+<hr>
+
+<!-- Alinear textos de acuerdo el tamaño de la pantalla-->
+<!--
+
+clases:
+
+"text-sm-right" = para alinaer un texto en tamaño pequeño, hacia la derecha.
+
+"text-md-right" = para alinaer un texto en tamaño mediano, hacia la derecha.
+
+"text-lg-right" = para alinaer un texto en tamaño grande, hacia la derecha.
+
+"text-xl-right" = para alinaer un texto en tamaño  muy grande, hacia la derecha.
+
+
+Nota: Para cambiar la orientacion a la izquierda se cambia 'right' por 'left' y para el texto centrado sera 'center'
+
+-->
+
+
+<p class="text-sm-right">hola que tal</p>
+<p class="text-md-right">hola que tal</p>
+<p class="text-lg-right">hola que tal</p>
+<p class="text-xl-right">hola que tal</p>
+<br> <br>
+
+ <!--Alineacion vertical -->
+ <!--
+
+Clases:
+
+"align-baseline" = Alineacion vertical por defectos.
+
+"align-top" = Alineacion vertical hacia arriba.
+
+"align-botton" = Alineacion vertical hacia abajo.
+
+"align-middle" = Alineacion vertical hacia el medio.
+
+"align-text-top" = Alineacion vertical del texto hacia arriba.
+
+"align-text-bottom" = Alineacion vertical del texto hacia abajo.
+
+  -->
+
+
+<span class="align-baseline">hello</span>
+<span class="align-top">hello</span>
+<span class="align-bottom">hello</span>
+<span class="align-middle">hello</span>
+<span class="align-text-top">hello</span>
+<span class="align-text-bottom">hello</span>
+
+<br><br>
+
+<!--Cambiar de un elemento bloque a linea o de un elemento linea a bloque -->
+<!--
+Clases:
+
+"bg-success" = nos cambia el color de fondo. Para visualizarlo en forma de ejemplo.
+
+"d-inline" es una abreviatura de display:inline, que me permite convertir los elementos de bloques a lineas.
+
+Los <span> </span> por defectos son defectos son linea.
+
+"d-block" es una abreviatura de display:block, que me permite convertir los elementos de lineas a bloques.
+ -->
+
+<h1 class="bg-success">hello</h1>
+<h2 class="bg-success">word</h2>
+
+
+<h1 class="bg-success d-inline" >hello</h1>
+<h2 class="bg-success d-inline">word</h2>
+
+<span class="bg-success d-block">bloque</span>
+<span class="bg-success"> 2de linea</span>
+
+<br><br>
+
+<!--Otra forma de agregar los elementos en lineas y en bloques, los <div> </div> son elementos en bloque. -->
+
+
+<div class= "d-inline-block bg-success">
+	<h1 >Hola que tal</h1>
+	<span>holaaa</span>
+</div>
+<div class= " d-inline-block bg-success">
+	<h1 >Hola que tal</h1>
+	<span>holaaa</span>
+</div>
+
+<!-- 3.- ELEMENTOS FOLOTANTES Y POSICIONES FIJAS -->
+
+<!-- 
+clases para flotar:
+
+"float-left" = flotar a la izquierda.
+"float-right" = flotar a la derecha.
+"float-none" =  no flotar.
+!-- 
+clases para flotar dependiendo del tamaño de la pagina:
+ 
+"float-sm-left" = flotar a partir de la pantalla pequeña a la izquierda.
+"float-md-left" = flotar a partir de la pantalla mediana a la izquierda.
+"float-lg-left" = flotar a partir de la pantalla grande a la izquierda.
+"float-xl-left" = flotar a partir de la pantalla extra grande a la izquierda.
+
+
+ -->
+ -->
+
+<div class="float-left">
+	hello
+</div>
+<div class="float-rigt">
+	hello
+</div>
+<div class="float-none">
+	hello
+</div>
+
+<br><br>
+
+<div class="float-sm-left"> hello </div>
+<div class="float-md-left"> hello </div>
+<div class="float-lg-left"> hello </div>
+<div class="float-xl-left"> hello </div>
+
+
+
+<br><br>
+<!-- Podemos reparar o solucionar aquellos elementos que se quedan flotando  -->
+
+<!-- 
+la clase "clearfix" me permite mantener el color del background asignado.
+ -->
+
+<div class="bg-success">
+	<button class="float-left">LEFT</button>
+	<button class="float-right">RIGHT</button>
+</div>
+ <br> <br>
+<div class="bg-success clearfix">
+	<button class="float-left">LEFT</button>
+	<button class="float-right">RIGHT</button>
+</div>
+
+
+<!-- Fijar textos en la pantalla  -->
+
+<!--la clase:
+"fixed-top" permite fijar el texto en la parte de arriba.
+
+"fixed-bottom" permite fijar el texto en la parte abajo, esto me sirve para el footer.
+
+"sticky-top" permite fijar el texto en la parte de arriba cuando sea visible y este al top de la pantalla.
+-->
+
+
+<h3 class = "fixed-top"> Navegar </h3>
+<h3 class = "fixed-bottom"> PIE </h3>
+
+<h3 class = "sticky-top"> Hola </h3>
+
+<hr>
+
+
+<!-- 4.- COLORES DE TEXTOS Y FONDOS -->
+
+<!-- 
+colores por predefinidos de bootstrap
+
+Para textos:
+
+"text-primary" = texto azul. común
+"text-success" = texto verde. operacion satisfactoria
+"text-info" = texto azul claro. informaciones
+"text-warning" = texto amarillo. advertencias
+"text-danger" = texto rojo. color de error.
+"text-dark" = texto morado~rosado.
+"text-white" = texto blanco.
+
+Para fondos:
+
+"bg-primary" = fondo azul.
+"bg-success" = fondo verde.
+"bg-info" = fondo azul claro.
+"bg-warning" = fondo amarillo.
+"bg-danger" = fondo rojo.
+"bg-dark" = fondo morado~rosado.
+"bg-white" = fondo blanco.
+
+para ocultar el texto hacerlo invisible se utiliza la clase "invisible".
+ -->
+
+<p class="text-dark bg-danger"> hola que tal</p>
+<h1 class="invisible"> hola que tal</h1>
+
+
+
+<!-- 5.- ESPACIADOS EN BOOTSTRAP : PPADING Y MARGENES-->
+
+<!--
+
+clases para margenes:
+
+margenes: en todas las direcciones. arriba, abajo, izquierda y derecha
+
+"m-5" = margen mayor
+"m-4" = margen menos que el anterior
+"m-3" = margen menos que el anterior
+"m-2" = margen menos que el anterior
+"m-1" = margen menor.
+"m-0" = margen por defecto
+
+margenes top: margenes de arriba.
+
+"mt-5" = margen mayor
+"mt-4" = margen menos que el anterior
+"mt-3" = margen menos que el anterior
+"mt-2" = margen menos que el anterior
+"mt-1" = margen menor.
+"mt-0" = margen por defecto
+
+margenes bottom: margenes de abajo.
+
+"mb-5" = margen mayor.
+"mb-4" = margen menos que el anterior.
+"mb-3" = margen menos que el anterior.
+"mb-2" = margen menos que el anterior.
+"mb-1" = margen menor.
+"mb-0" = margen por defecto.
+
+margenes left: margenes de izquierda.
+
+"ml-5" = margen mayor.
+"ml-4" = margen menos que el anterior.
+"ml-3" = margen menos que el anterior.
+"ml-2" = margen menos que el anterior.
+"ml-1" = margen menor.
+"ml-0" = margen por defecto.
+
+margenes right: margenes de derecha.
+
+"mr-5" = margen mayor.
+"mr-4" = margen menos que el anterior.
+"mr-3" = margen menos que el anterior.
+"mr-2" = margen menos que el anterior.
+"mr-1" = margen menor.
+"mr-0" = margen por defecto.
+
+margenes en el eje x: margenes izquierda y derecha.
+
+"mx-5" = margen mayor.
+"mx-4" = margen menos que el anterior.
+"mx-3" = margen menos que el anterior.
+"mx-2" = margen menos que el anterior.
+"mx-1" = margen menor.
+"mx-0" = margen por defecto.
+
+margenes en el eje y: margenes arriba y abajo.
+
+"my-5" = margen mayor.
+"my-4" = margen menos que el anterior.
+"my-3" = margen menos que el anterior.
+"my-2" = margen menos que el anterior.
+"my-1" = margen menor.
+"my-0" = margen por defecto.
+
+
+-->
+
+<h1 class="bg-success m-5"> Hola que tal</h1>
+
+
+<!--
+clases para el padding:
+
+padding: en todas las direcciones. arriba, abajo, izquierda y derecha
+
+"p-5" = padding  mayor
+"p-4" =  menos que el anterior
+"p-3" =  menos que el anterior
+"p-2" =  menos que el anterior
+"p-1" =  padding menor.
+"p-0" =  por defecto
+
+padding top: margenes de arriba.
+
+"pt-5" = padding  mayor
+"pt-4" =  menos que el anterior
+"pt-3" =  menos que el anterior
+"pt-2" =  menos que el anterior
+"pt-1" =  padding menor.
+"pt-0" =  por defecto
+
+padding bottom: margenes de abajo.
+
+"pb-5" = padding  mayor.
+"pb-4" =  menos que el anterior.
+"pb-3" =  menos que el anterior.
+"pb-2" =  menos que el anterior.
+"pb-1" = padding  menor.
+"pb-0" =  por defecto.
+
+padding left: margenes de izquierda.
+
+"pl-5" = padding  mayor.
+"pl-4" =  menos que el anterior.
+"pl-3" =  menos que el anterior.
+"pl-2" =  menos que el anterior.
+"pl-1" = padding  menor.
+"pl-0" =  por defecto.
+
+padding right: margenes de derecha.
+
+"pr-5" = padding  mayor.
+"pr-4" =  menos que el anterior.
+"pr-3" =  menos que el anterior.
+"pr-2" = padding  menos que el anterior.
+"pr-1" = padding  menor.
+"pr-0" = padding  por defecto.
+
+padding en el eje x: padding en la izquierda y derecha.
+
+"mx-5" = padding  mayor.
+"mx-4" =  menos que el anterior.
+"mx-3" = menos que el anterior.
+"mx-2" =  menos que el anterior.
+"mx-1" = padding  menor.
+"mx-0" = por defecto.
+
+padding en el eje y: padding arriba y abajo.
+
+"py-5" = padding mayor.
+"py-4" =  menos que el anterior.
+"py-3" =  menos que el anterior.
+"py-2" =  menos que el anterior.
+"py-1" =  padding menor.
+"py-0" =  por defecto.
+
+
+-->
+<h1 class="bg-success p-5"> Hola que tal</h1>
+
+
+
+<!-- 5.- ALTOS Y ANCHOS DE LOS ELEMENTOS-->
+
+<!--
+Para definir los anchos (width) se utiliza la clase:
+
+"w-25" = para un 25%.
+"w-55" = para un 50%.
+"w-75" = para un 75%.
+"w-100" = para un 100%.
+
+
+-->
+
+<div class="bg-warning p-3 w-25">
+	ancho
+</div>
+<div class="bg-warning p-3 w-50">
+	ancho
+</div>
+<div class="bg-warning p-3 w-75">
+	ancho
+</div>
+<div class="bg-warning p-3 w-100">
+	ancho
+</div>
+ 
+ <hr>
+
+<div class="bg-success" style="border: 1px solid #000; height: 300px">
+	<div class="bg-primary d-inline-block h-25">
+		elemento 1
+	</div>
+	<div class="bg-primary d-inline-block h-50">
+		elemento 1
+	</div>
+	<div class="bg-primary d-inline-block h-75">
+		elemento 1
+	</div>
+	<div class="bg-primary d-inline-block h-100">
+		elemento 1
+	</div>
+</div>
+
+ <br> <br>
+<!-- 6. BREAKPOINTS DE BOOTSTRAP, PARA CAMBIAR LOS ESTILOS DEPENDIENDO DEL TAMAÑO DE PANTALLA  -->
+
+<!-- para no agregar estilos por separado de css por separa, se agrega la etiqueta <style> </style> en el <head></head> antes del <body></body>
+
+ir a pag: 11
+ -->
+
+
+<!-- 7. BOTONES EN BOOTSTRAP -->
+
+<!--
+clases:
+"btn" = sirve para darle un estilo de bootstrap y prepararlo para darle un color como:
+
+"btn-primary" = color azul predefinido.
+"btn-secundary" = color gris predefinido.
+"btn-success" = color verde predefinido.
+"btn-light" = color blanco y negro predefinido.
+"btn-dark" = color blanco y negro predefinido.
+"btn-link" = simula un enlace.
+
+
+-->
+<button class="btn btn-primary"> PRUEBA</button>
+<button class="btn btn-secondary"> PRUEBA</button>
+<button class="btn btn-success"> PRUEBA</button>
+<button class="btn btn-info"> PRUEBA</button>
+<button class="btn btn-warning"> PRUEBA</button>
+<button class="btn btn-danger"> PRUEBA</button>
+<button class="btn btn-light"> PRUEBA</button>
+<button class="btn btn-dark"> PRUEBA</button>
+<button class="btn btn-link"> PRUEBA</button>
+
+<hr><br><br>
+
+<!-- cuatro manera de estilizar los botones -->
+
+<!-- 1 -->
+<a href="a" class="btn btn-primary">Enlace</a>
+
+<!-- 2 boton tipo submit -->
+
+<button type="submit" class="btn btn-warning"> ENVIAR</button>
+
+<!-- 3 tipo button, submit y reser -->
+
+<input type="button" class="btn btn-success" name=""  value="Aceptar">
+
+<input type="button" class="btn btn-dark" name=""  value="Enviar">
+
+<input type="reset" class="btn btn-warning" name=""  value="Resetear">
+
+ <hr>
+
+ <!-- 4  -->
+
+<button class="btn btn-outline-primary">BOTON</button>
+<button class="btn btn-outline-secondary">BOTON</button>
+<button class="btn btn-outline-success">BOTON</button>
+<button class="btn btn-outline-info">BOTON</button>
+<button class="btn btn-outline-danger">BOTON</button>
+<button class="btn btn-outline-dark">BOTON</button>
+
+<hr><br>
+
+<!-- Darles tamaño a los botones-->
+
+<button class="btn btn-primary">BOTON</button>
+<button class="btn btn-primary btn-lg">BOTON</button>
+<button class="btn btn-primary btn-sm">BOTON</button>
+<br><br>
+<button class="btn btn-primary btn-block">BOTON</button>
+<hr> <br>
+
+<!-- Añadir iconos a los botones utilizando fontawesome, el link se busca en google: fontawesome cdn -> la primera pag -> y luego se copia el link de html y se pega dentro del <head></head>.
+-->
+<button class="btn btn-primary "><i class="fa fa-user"></i> BOTON</button>
+<!-- para buscar mas iconos se ingresa a la pag fontawesome.io y  vamos a la seccion de iconos y se selecciona uno y se copia y pega.
+
+Nota: si la clase del icone es "fab fa-apple", se cambia fab por fa, y de esta manera reconocera el icono. quedaria de la clase como: 
+"fa fa-apple"
+
+ -->
+<button class="btn btn-primary "><i class="fa fa-apple"></i> BOTON</button>
+<hr><br>
+
+<!-- cambiar el estados de los botones -->
+
+
+<!-- la clase "active" define el estado como si estubiera activo siempre.
+ la clase "disable" define el estado si estubiera siempre desactivado.
+
+el atributo; data-toggle ="button" sirve mantener los estados con un solo click. 
+
+  -->
+<button class="btn btn-primary active">BOTON</button>
+<button class="btn btn-primary disable">BOTON</button>
+<button class="btn btn-primary" data-toggle="button">BOTON</button>
+<hr><br>
+
+<!-- Drop down, son botones que al hacer click desencadena un menu hacia arriba o hacia abajo.-->
+
+
+<div class="dropdown">
+	<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Elegir</button>
+	<div class="dropdown-menu">
+		<a href="a" class="dropdown-item">Uno</a>
+		<a href="a" class="dropdown-item">dos</a>
+		<a href="a" class="dropdown-item">tres</a>
+	</div>
+</div>
+<hr><br>
+
+<!-- DropDown de 2 secciones, para agrupar dos botones, siendo uno simple y otro DropDown-->
+
+
+<div class="btn-group">
+	<button class="btn btn-primary">MI BOTON
+	</button>
+	<button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle ="dropdown">
+		Toggle DropDown
+	</button>
+	<div class="dropdown-menu">
+		<a href="a" class="dropdown-item">Uno</a>
+		<a href="a" class="dropdown-item">dos</a>
+		<a href="a" class="dropdown-item">tres</a>
+	</div>
+
+</div>
+<hr><br>
+
+<!-- DropDown para 2 secciones, para agrupar dos botones, siendo uno simple y otro DropDown-->
+
+<div class="btn-group">
+<button class="btn btn-danger">IZQUIERDA</button>
+<button class="btn btn-danger">CENTER</button>
+<button class="btn btn-danger">DERECHA</button>	
+</div>
+
+<br><hr><br>
+
+<!--button toolbar, una manera para definir los botones, y poder separarlos por fila-->
+
+<div class="btn btn-toolbar" role = "toolbar">
+
+	<div class="btn-group m-1">
+		<button class="btn btn-danger">1</button>
+		<button class="btn btn-danger">2</button>
+		<button class="btn btn-danger">3</button>
+		<button class="btn btn-danger">4</button>
+	</div>
+	<div class="btn-group m-1">
+		<button class="btn btn-danger">5</button>
+		<button class="btn btn-danger">6</button>
+		<button class="btn btn-danger">7</button>
+		<button class="btn btn-danger">8</button>
+	</div>
+
+	<button class="btn btn-danger m-1">9</button>
+</div>
+
+
+<!--Agrupar botones de forma vertical, con la clase "btn-group-vertical"-->
+
+<div class="btn-group-vertical">
+<button class="btn btn-danger">ARRIBA</button>
+<button class="btn btn-danger">CENTER</button>
+<button class="btn btn-danger">ABAJO</button>	
+</div>
+<hr><br><br>
+
+
+<!-- 9.- ESTILOS DE LISTA  -->
+
+
+<!-- para los grupos de lista se uliliza la etiqueta <ul></ul> la clase "container" permite centrar -->
+
+
+<!--Para estilizar las listas se utiliza la clase "list-group-item"-->
+<ul class="list-group container">
+
+<li class="list-group-item">item 1</li>
+<li class="list-group-item">item 2</li>
+<li class="list-group-item">item 3</li>
+<li class="list-group-item">item 4</li>
+
+</ul>
+ <hr>
+
+<!-- Para estilizar los enlaces, multiples etiquetas <a> </a> -->
+
+<ul class="list-group container">
+<a href="a" class="list-group-item">Enlace 1</a>
+<a href="a" class="list-group-item">Enlace 1</a>
+<a href="a" class="list-group-item">Enlace 1</a>
+<a href="a" class="list-group-item">Enlace 1</a>
+</ul>
+
+<hr>
+
+<!-- Para estilizar las listas a traves de colores-->
+
+
+<ul class="list-group container">
+	<a href="a" class="list-group-item">Enlace 1</a>
+	<a href="a" class=" list-group-item list-group-item-primary">Enlace 1</a>
+	<a href="a" class=" list-group-item list-group-item-success">Enlace 1</a>
+	<a href="a" class=" list-group-item list-group-item-secondary">Enlace 1</a>
+	<a href="a" class=" list-group-item list-group-item-danger">Enlace 1</a>
+	<a href="a" class=" list-group-item list-group-item-info">Enlace 1</a>
+	<a href="a" class=" list-group-item list-group-item-dark">Enlace 1</a>
+</ul>
+
+<!-- los badge, item para resaltar una especie de contador
+la clase:
+ 
+ "badge-primary" = permite agregar un estilo y un color de fondo de forma cuadrada.
+ "badge-pill" = permite agregar un estilo y un color pero de forma redonda.
+
+ "d-flex" "justify-content-between" "align-items-center" = estas tres clases juntas sirven para colocar 
+ el <span></span> al lado derecho.
+
+ -->
+
+<ul class="list-group container">
+	<a href="a" class="list-group-item">Lorem <span class="badge">14</span></a>
+	<a href="a" class="list-group-item">Lorem <span class="badge badge-primary">14</span></a>
+	<a href="a" class="list-group-item">Lorem <span class="badge badge-pill badge-primary">14</span></a><a href="a" class="list-group-item d-flex justify-content-between align-items-center">Lorem <span class="badge badge-pill badge-primary">14</span>   </a> 
+
+</ul>
+
+<!-- Para jugar con los margenes y las posiciones, para realizar una especie de titulo y parrafo dandole un estilo de enlace-->
+
+<div class="list-group container">
+	<a href="a" class="list-group-item list-group-item-action flex-column align-item-start active">
+	<div class="d-flex w-100 justify-content-between">
+		<h5>Hola que tal</h5>
+		<small>Que hay de nuevo</small>
+	</div>
+
+	<p>c an ad fn adf  df dbf bnf   ef bnf   f ebf ef  ef ef bef bef qef q cqbn qebw cqebc qb qebf</p>
+	</a>
+</div>
+
+
+<!-- Breadcrumb, o migajas de pan, la etiqueta <ol></ol> significa listas ordenadas-->
+
+<ol class="breadcrumb container">
+	<li class="breadcrumb-item">Lorem</li>
+</ol>
+
+
+<ol class="breadcrumb container">
+	<li class="breadcrumb-item">Lorem</li>
+	<li class="breadcrumb-item">Lorem</li>
+</ol>
+
+<ol class="breadcrumb container">
+	<li class="breadcrumb-item">Lorem</li>
+	<li class="breadcrumb-item active">Lorem</li>
+</ol>
+
+<ol class="breadcrumb container">
+	<li class="breadcrumb-item">Lorem</li>
+	<li class="breadcrumb-item">Lorem</li>
+	<li class="breadcrumb-item">Lorem</li>
+
+</ol>
+<hr><br><br>
+
+
+
+<!-- 9.-NAVEGACIONES DE BOOTSTRAP -->
+
+<!-- Por lo general cuando escribimos una navegacion utilizamos la etiqueta <nav></nav>,
+
+la clase 
+"navbar-expand-md" = permite que en el tamaño medio se expanda.
+
+"navbar-light" = para decir que la navegacion tenga un color ligero.
+ -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+	<a href="a" class="navbar-brand">Otro Estilo</a>
+
+	<ul class="navbar-nav">
+		<li class="nav-item"><a href="a" class="nav-link"  >Home</a></li>
+		<li class="nav-item"><a href="a" class="nav-link"  >Servicio</a></li>
+		<li class="nav-item"><a href="a" class="nav-link"  >About</a></li>
+		<li class="nav-item"><a href="a" class="nav-link"  >Contact</a></li>
+	</ul>
+
+</nav>
+
+<hr><br><br>
+
+<!-- Para representarlos a la derecha, y al reducir la pantalla auto ajustar hacia abajo-->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+<div class="container">
+	
+	<a href="a" class="navbar-brand">Otro Estilo</a>
+
+<div class="navbar-collapse">
+		<ul class="navbar-nav  ml-auto">
+
+		<li class="nav-item"><a href="a" class="nav-link"  >Home</a></li>
+		<li class="nav-item"><a href="a" class="nav-link"  >Servicio</a></li>
+		<li class="nav-item"><a href="a" class="nav-link"  >About</a></li>
+		<li class="nav-item"><a href="a" class="nav-link"  >Contact</a></li>
+	</ul>
+	</div>
+
+</div>	
+
+</nav>
+
+<hr><br><br>
+	
+<!-- Menu de hamburguesas
+
+Para hacerlo es necesario colocar el atributo 'id' para indicar que es lo que quiero desplecar, y ese 'id' se utiliza en el button en el atributo 'data-target' anteponiendole el numeral #, en este caso como el id ="firstNavbar" se coloca en el atributo de button data-target ="#firstNavbar" -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+	<div class="container">
+		<a href="#" class="navbar-brand">App</a>
+
+		<button type="button" class="navbar-toggler" data-toggle = "collapse" data-target = "#firstNavbar"><span class="navbar-toggler-icon"></span>		
+		</button>
+		<div class=" collapse navbar-collapse" id ="firstNavbar">
+			<ul class="navbar-nav  ml-auto">
+				<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Servicio</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+			</ul>
+		</div>
+	</div>	
+</nav>
+
+<hr><br>
+
+<!-- Menu de busquedas-->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+	<div class="container">
+		<a href="#" class="navbar-brand">App</a>
+
+		<button type="button" class="navbar-toggler" data-toggle = "collapse" data-target = "#secondNavbar"><span class="navbar-toggler-icon"></span>		
+		</button>
+		<div class=" collapse navbar-collapse" id ="secondNavbar">
+			<ul class="navbar-nav  ml-auto">
+				<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Servicio</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+			</ul>
+			<form class="form-inline">
+			<input type="text" class="form-control"  placeholder="Search" name="">
+			<button type="button" class="btn btn-outline-primary"> Buscarrr</button>
+			</form>
+		</div>
+	</div>	
+</nav>
+
+<hr><br><br>
+
+<!-- Navegaciones que tenga un sub item oun subcampo dentro-->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+	<div class="container">
+		<a href="#" class="navbar-brand">App</a>
+
+		<button type="button" class="navbar-toggler" data-toggle = "collapse" data-target = "#secondNavbar"><span class="navbar-toggler-icon"></span>		
+		</button>
+		<div class=" collapse navbar-collapse" id ="secondNavbar">
+			<ul class="navbar-nav  ml-auto">
+				<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Servicio</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+			
+			<li class="nav-item dropdown">
+			<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">
+				Item Padre
+			</a>
+			<div class="dropdown-menu">
+				<a href="#" class="dropdown-item">item 1</a>
+				<a href="#" class="dropdown-item">item 1</a>
+				<a href="#" class="dropdown-item">item 1</a>
+				<a href="#" class="dropdown-item">item 1</a>
+				<a href="#" class="dropdown-item">item 1</a>
+			</div>
+			</li>
+
+			</ul>
+
+		</div>
+	</div>	
+</nav>
+<hr><br><br>
+
+
+<!-- 10.- ALERTAR Y PROGRESS BAR -->
+
+<div class="alert alert-danger container">
+	<strong>Mensaje</strong> Lorem impsum <a href="" class="alert-link"> Click aqui!</a>
+	
+</div>
+
+<div class="alert alert-success container">
+	<strong>Mensaje</strong> Lorem impsum <a href="" class="alert-link"> Click aqui!</a>
+	
+</div>
+<div class="alert alert-light container">
+	<strong>Mensaje</strong> Lorem impsum <a href="" class="alert-link"> Click aqui!</a>
+	
+</div>
+<div class="alert alert-info container">
+	<strong>Mensaje</strong> Lorem impsum <a href="" class="alert-link"> Click aqui!</a>
+	
+</div>
+<div class="alert alert-dark container">
+	<strong>Mensaje</strong> Lorem impsum <a href="" class="alert-link"> Click aqui!</a>
+	
+</div>
+
+
+
+<div class="alert alert-warning  container">
+	
+	<button type="button" class="close" data-dismiss ="alert">
+		<span>&times;</span>
+	</button>
+	
+	<strong>Mensaje</strong> Lorem impsum <a href="" class="alert-link"> Click aqui!</a>
+	
+</div>
+
+
+<div class="alert alert-warning alert-dismissible fade show container">
+	
+	<button type="button" class="close" data-dismiss ="alert">
+		<span>&times;</span>
+	</button>
+	
+	<strong>Mensaje</strong> Lorem impsum <a href="" class="alert-link"> Click aqui!</a>
+	
+</div>
+
+<hr> <br><br>
+
+<!-- Barras progresivas o progress Bar-->
+
+<div class="container">
+<div class="progress">
+	<div class="progress-bar" style="width: 25%"></div>
+</div>
+<br><br>
+<div class="progress">
+	<div class="progress-bar bg-success" style="width: 25%"></div>
+</div>
+<br><br>
+<!-- Otro estilo de barras progresivas-->
+
+<div class="progress">
+	<div class="progress-bar bg-danger progress-bar-striped" style="width: 25%"></div>
+</div>
+<br><br>
+
+<div class="progress">
+	<div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 25%"></div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<hr><br><br>
+<!-- BOOTSTRAP CDN SLIM (depende de JQUERY) Y POPPER, van justo antes de BOOTSTRAP CDN JAVASCRIPT  -->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<!-- BOOTSTRAP CDN JAVASCRIPT  nota: va en la ultima parte del body-->
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
